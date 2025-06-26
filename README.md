@@ -16,13 +16,13 @@
 |------------------------|-----------------------------------|
 | HTML5                  | Structure and markup              |
 | CSS3                   | Styling and responsive layout     |
-| JavaScript (Vanilla)   | Functionality and interactivity   |
+| JavaScript             | Functionality and interactivity   |
 | YouTube Embed          | Video playback                    |
 
 
 ## 📁 Project Structure
 ```
-Streamify/
+streamify/
 ├── index.html          // Home page with movie cards
 ├── watch.html          // Watch page with video player
 ├── style.css           // All custom styles
