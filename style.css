@@ -1,110 +1,100 @@
-
 * {
   box-sizing: border-box;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #fdfdfd;
-  color: #111;
+  background: #121212;
+  color: #e0e0e0;
   overflow-x: hidden;
 }
 
-
 header {
-  background: #ffffff;
-  padding: 28px 40px;
+  background: #1e1e1e;
+  padding: 24px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #2a2a2a;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 header h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
   font-size: 26px;
-  color: #1f1f1f;
-  margin: 0;
-  letter-spacing: -1px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
 input[type="text"] {
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 30px;
-  border: 1px solid #ddd;
-  background: #fff;
+  border: none;
+  background: #2a2a2a;
+  color: #f0f0f0;
   font-size: 15px;
   width: 260px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  outline: none;
+  box-shadow: inset 0 0 0 1px #333;
 }
-
 
 #genres {
   text-align: center;
-  padding: 24px 20px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  padding: 20px 20px;
+  background: #181818;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 #genres button {
   margin: 6px;
-  padding: 10px 22px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 30px;
-  background: #f2f2f2;
-  color: #333;
+  border-radius: 20px;
+  background: #292929;
+  color: #ccc;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.04), -2px -2px 5px rgba(255,255,255,0.6);
 }
 
 #genres button:hover {
-  background: #1a1a1a;
-  color: white;
+  background: #e50914;
+  color: #fff;
 }
-
 
 #movieGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 30px;
   padding: 40px;
 }
 
-
 .movie-card {
-  background: #ffffff;
-  border-radius: 16px;
+  background: #1c1c1c;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .movie-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.03);
+  box-shadow: 0 10px 24px rgba(229, 9, 20, 0.4);
 }
 
 .movie-card img {
   width: 100%;
-  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
 }
 
 .movie-details {
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -112,14 +102,13 @@ input[type="text"] {
 
 .movie-card h3 {
   font-size: 18px;
-  font-weight: 600;
+  color: #ffffff;
   margin: 0;
-  color: #1a1a1a;
 }
 
 .movie-card p {
   font-size: 14px;
-  color: #555;
+  color: #aaaaaa;
   line-height: 1.5;
   max-height: 48px;
   overflow: hidden;
@@ -127,7 +116,7 @@ input[type="text"] {
 }
 
 .movie-card small {
-  color: #999;
+  color: #777;
   font-size: 12px;
 }
 
@@ -136,18 +125,17 @@ input[type="text"] {
   margin-top: 10px;
   padding: 8px 18px;
   border-radius: 25px;
-  background: #1a1a1a;
+  background: #e50914;
   color: white;
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.3);
 }
 
 .movie-card a:hover {
-  background: #000;
+  background: #b0060f;
 }
-
 
 @media (max-width: 500px) {
   header {
@@ -160,7 +148,7 @@ input[type="text"] {
   }
 
   .movie-details {
-    padding: 16px;
+    padding: 14px;
   }
 
   .movie-card h3 {
@@ -177,41 +165,20 @@ input[type="text"] {
   }
 }
 
-
 .player-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #fdfdfd;
+  background: #121212;
   padding: 40px 20px;
 }
 
 iframe {
   border: none;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   max-width: 960px;
   width: 100%;
   background: #000;
 }
-#adminLink {
-  margin-left: 16px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #555;
-  background: #eee;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 500;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-#adminLink:hover {
-  background: #1a1a1a;
-  color: white;
-}
-
-
-
-
